@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Advanced Search</title>
+    <title>Google Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #4285f4;
-            color: #ffffff;
+            font-family: sans-serif;
             padding: 20px;
-            text-align: center;
         }
 
-        header h1 {
-            font-size: 36px;
+        p {
+            font-size: 1.5rem;
         }
 
-        #search-container {
-            background-color: #ffffff;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        #search-form {
-            text-align: center;
+        label,
+        input[type="text"] {
+            display: block;
         }
 
         label {
-            font-size: 18px;
-            display: block;
-            margin-bottom: 10px;
+            margin-top: 25px;
         }
 
         input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            width: 30%;
+            padding: 8px;
+            margin-bottom: 10px;
         }
 
         input[type="submit"] {
+            margin-top: 20px;
             background-color: #4285f4;
             color: #ffffff;
-            padding: 12px 24px;
-            font-size: 18px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         input[type="submit"]:hover {
             background-color: #357ae8;
         }
+
+        .google-text {
+            font-size: 3rem;
+        }
+
+        .search-links {
+            position: absolute;
+            top: -1px;
+            right: -10px;
+            gap: 2rem;
+            display: flex;
+            color: #ca2222;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Google Advanced Search</h1>
-    </header>
-    <div id="search-container">
-        <form id="search-form" action="https://www.google.com/search" method="GET">
-            <label for="query">Find pages with:</label>
-            <input type="text" id="query" name="q" placeholder="Keywords">
 
-            <label for="exact-phrase">all these words:</label>
+<body>
+    <div class="search-container">
+        <p class="google-text"><span style="color: blue;">G</span><span style="color: red;">o</span><span
+                style="color: yellow;">o</span><span style="color: blue;">g</span><span
+                style="color: green;">l</span><span style="color: red;">e</span><span
+                style="color: blue; font-size: 15px;">Advanced</span></p>
+        <p>Find pages with...</p>
+        <form id="search-form" action="https://www.google.com/search" method="GET">
+            <label for="all-words">all these words:</label>
+            <input type="text" id="all-words" class="chalmar" name="q" placeholder="Keywords">
+
+            <label for="exact-phrase">this exact word or phrase:</label>
             <input type="text" id="exact-phrase" name="as_epq" placeholder="Exact phrase">
 
             <label for="any-words">any of these words:</label>
@@ -83,8 +89,12 @@
             <label for="exclude-words">none of these words:</label>
             <input type="text" id="exclude-words" name="as_eq" placeholder="Exclude words">
 
-            <input type="submit" value="Google Search">
+            <input type="submit" value="Advanced Search">
         </form>
     </div>
+    <div class="search-links">
+        <a href="Index.html">Home</a>
+    </div>
 </body>
+
 </html>
