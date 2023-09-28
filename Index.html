@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,7 @@
             outline: none;
         }
 
-        input[type="submit"] {
+        .search-button {
             margin-top: 10px;
             background-color: #4285f4;
             color: #ffffff;
@@ -40,46 +41,53 @@
             cursor: pointer;
         }
 
-        input[type="submit"]:hover {
+        .search-button:hover {
             background-color: #357ae8;
         }
 
-        .search-buttons {
+        .search-links {
             position: absolute;
-            top: -55px;
-            right: 10px;
+            top: -1px;
+            right: -10px;
+            gap: 2rem;
             display: flex;
-        }
-
-        .search-button {
-            background-color: #4285f4;
-            color: #ffffff;
+            color: #ca2222;
             border: none;
             padding: 10px 20px;
             border-radius: 24px;
             cursor: pointer;
             margin-left: 10px;
-            margin-top: -50px;
         }
 
-        .search-button:hover {
-            background-color: #357ae8;
+        a {
+            text-decoration: none;
+        }
+
+        .search-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
+
 <body>
     <div class="search-container">
         <p class="google-text">Google</p>
         <form action="https://www.google.com/search">
             <input type="text" name="q" placeholder="Search Google">
             <br>
-            <input type="submit" value="Google Search">
+            <input type="submit" class="search-button" value="Google Search">
         </form>
-        
-        <div class="search-buttons">
-            <input type="submit" value="Advanced Search" onclick="location.href='Adv_search.html'" class="search-button">
-            <input type="submit" value="Image Search" onclick="location.href='Img_search.html'" class="search-button">
-        </div>
     </div>
+
+    <div class="search-links">
+        <a href="Adv_search.html">Advanced Search</a>
+        <a href="Img_search.html">Image Search</a>
+    </div>
+
 </body>
+
 </html>
