@@ -7,11 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
 
         .search-container {
             text-align: center;
             margin-top: 50px;
+            position: relative;
         }
 
         .google-text {
@@ -41,6 +43,28 @@
         input[type="submit"]:hover {
             background-color: #357ae8;
         }
+
+        .search-buttons {
+            position: absolute;
+            top: -55px;
+            right: 10px;
+            display: flex;
+        }
+
+        .search-button {
+            background-color: #4285f4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-top: -50px;
+        }
+
+        .search-button:hover {
+            background-color: #357ae8;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +75,11 @@
             <br>
             <input type="submit" value="Google Search">
         </form>
+        
+        <div class="search-buttons">
+            <input type="submit" value="Advanced Search" onclick="location.href='page4.html'" class="search-button">
+            <input type="submit" value="Image Search" onclick="location.href='page2.html'" class="search-button">
+        </div>
     </div>
 </body>
 </html>
