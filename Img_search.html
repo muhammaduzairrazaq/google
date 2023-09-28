@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Image Search</title>
+    <title>Google Search</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
         }
 
-        header {
-            background-color: #4285f4;
-            color: #ffffff;
-            padding: 20px;
+        .search-container {
             text-align: center;
+            position: relative;
         }
 
-        header h1 {
-            font-size: 36px;
+        .google-text {
+            color: #4285f4;
+            font-weight: bold;
+            font-size: 70px;
         }
 
-        #search-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        #search-box {
-            width: 400px;
+        input[type="text"] {
+            height: 25px;
             padding: 10px;
-            font-size: 18px;
+            width: 500px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 24px;
+            outline: none;
         }
 
-        #search-button {
+        .search-button {
+            margin-top: 10px;
             background-color: #4285f4;
             color: #ffffff;
-            padding: 10px 20px;
-            font-size: 18px;
             border: none;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 24px;
             cursor: pointer;
         }
 
-        #search-button:hover {
+        .search-button:hover {
             background-color: #357ae8;
+        }
+
+        .search-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Google Image Search</h1>
-    </header>
-    <div id="search-container">
+    <div class="search-container">
+    <p class="google-text"><span>G</span><span style="color: red;">o</span><span
+            style="color: yellow;">o</span><span>g</span><span style="color: green;">l</span><span
+            style="color: red;">e</span><span style="color: blue; font-size: 15px;">images</span></p>
         <form action="https://www.google.com/search" method="GET">
-            <input type="text" id="search-box" name="q" placeholder="Search images...">
+            <input type="text" name="q" placeholder="Search Images">
             <input type="hidden" name="tbm" value="isch">
-            <input type="submit" id="search-button" value="Search">
+            <br>
+            <input type="submit" class="search-button" value="Google Search">
         </form>
     </div>
 </body>
+
 </html>

@@ -9,23 +9,27 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
+            background-image: url('/bk1.png');
+            background-repeat: no-repeat;
+            overflow: hidden;
+
         }
 
         .search-container {
             text-align: center;
-            margin-top: 50px;
             position: relative;
         }
 
         .google-text {
             color: #4285f4;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 70px;
         }
 
         input[type="text"] {
+            height: 25px;
             padding: 10px;
-            width: 400px;
+            width: 500px;
             border: 1px solid #ccc;
             border-radius: 24px;
             outline: none;
@@ -70,14 +74,14 @@
             align-items: center;
             justify-content: center;
         }
-
-      
     </style>
 </head>
 
 <body>
     <div class="search-container">
-        <p class="google-text">Google</p>
+        <p class="google-text"><span>G</span><span style="color: red;">o</span><span
+                style="color: yellow;">o</span><span>g</span><span style="color: green;">l</span><span
+                style="color: red;">e</span></p>
         <form action="https://www.google.com/search">
             <input type="text" name="q" placeholder="Search Google">
             <br>
