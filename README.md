@@ -2,4 +2,4 @@ In this project, I have created three Google pages homepage, image search, advan
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- google: [Launch](https://muhammaduzairrazaq.github.io/portfolio/
+- Google: [Launch](https://muhammaduzairrazaq.github.io/google/)
